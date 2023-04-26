@@ -1,0 +1,15 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+
+.cmp-properties {
+
+    &__property {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap: 1rem;
+        padding: 0.5rem;
+
+        &:hover {
+            background-color: fade(@weborange, 20%);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_responsive.less";
+
+.cmp-cards-panel {
+    .aem-Grid * + & {
+        padding: 2rem 0;
+    }
+
+    .cmp-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+
+        .onTablet({
+            grid-template-columns: repeat(2, 1fr);
+        });
+
+        .onDesktop({
+            grid-template-columns: repeat(3, 1fr);
+
+        });
+    }
+}

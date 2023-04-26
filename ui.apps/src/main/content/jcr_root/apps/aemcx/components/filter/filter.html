@@ -1,0 +1,16 @@
+<div class="cmp-filter"
+     data-sly-use.filterModel="com.aemcx.core.models.FilterModel">
+  <i class="icon-menu cmp-filter__menu-trigger"></i>
+
+  <form class="cmp-filter__form cmp-filter__wrapper">
+    <sly data-sly-resource="${'separator' @ resourceType='/apps/core/wcm/components/separator/v1/separator'}"></sly>
+
+    <label data-sly-repeat.tag="${filterModel.tags}"
+          class="cmp-filter__item-link">
+        <input type="checkbox" name="${tag.title}" value="${tag.titlePath}" class="cmp-filter__checkbox"/>
+        <span class="cmp-filter__item-link-text">${tag.title}</span>
+    </label>
+
+    <button class="cmp-filter__button" type="submit">${'Apply filters' @ i18n}</button>
+  </form>
+</div>

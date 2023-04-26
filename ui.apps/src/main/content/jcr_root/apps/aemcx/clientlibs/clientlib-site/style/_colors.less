@@ -1,0 +1,8 @@
+.for(@colors); .-each(@color) {
+    @name: extract(@color,1);
+    @hex: extract(@color,2);
+
+    .@{name} {
+        color: @hex;
+    }
+}

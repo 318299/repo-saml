@@ -1,0 +1,128 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_responsive.less";
+
+.cmp-header {
+    --horizontal-padding: 5%;
+    --vertical-padding: 1rem;
+    --header-padding: var(--vertical-padding) var(--horizontal-padding);
+    display: grid;
+
+    .onTablet({
+        --vertical-padding: 2rem;
+        --header-padding: var(--vertical-padding) var(--horizontal-padding);
+    });
+
+    &__top {
+        padding: var(--header-padding);
+        background-color: fade(@weborange, 90%);
+        display: grid;
+        grid-template-columns: 10fr auto;
+        grid-gap: 3rem;
+        justify-items: end;
+        align-items: center;
+        position: relative;
+    }
+
+    &__logo {
+        background: url(/etc.clientlibs/aemcx/clientlibs/clientlib-site/resources/img/logo_patch.svg);
+        background-position: bottom;
+        background-size: cover;
+        position: absolute;
+        left: var(--horizontal-padding);
+        z-index: 900;
+        top: 0;
+        padding: 2rem;
+
+        .logo-signature {
+            width: 100px;
+
+            .onTablet({
+                width: 150px;
+            });
+        }
+    }
+
+    &__menu {
+        .icon-menu {
+            .onTablet({
+                display: none;
+            });
+        }
+
+        .cmp-header__menu-list {
+            display: none;
+            padding: 2rem;
+
+            .onTablet({
+                display: block;
+                padding: 0;
+            });
+
+            &.active {
+                display: block;
+                position: absolute;
+                width: 100vw;
+                left: 0;
+                top: 50px;
+                background-color: fade(@weborange, 90%);
+                z-index: 200;
+
+                .cmp-header__user {
+                    display: block;
+                }
+
+                .cmp-header__navigation {
+                    display: grid;
+                }
+            }
+        }
+
+        .cmp-header__navigation {
+            display: none;
+        }
+    }
+
+    &__navigation {
+        display: none;
+
+        .onTablet({
+            padding: var(--header-padding);
+            display: grid;
+            justify-items: end;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        });
+    }
+
+    .aemcx-search-modal {
+        color: @white;
+        .modal-header {
+            border: none;
+            text-align: right;
+        }
+
+        .modal-content {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+        }
+
+        .close-search {
+            font-size: 3rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.aemcx-search-color {
+    .modal-backdrop {
+        background-color: @weborange;
+    }
+
+    .modal-backdrop.in {
+        opacity: .97;
+    }
+}

@@ -1,0 +1,36 @@
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  color: @nightrider;
+  font-family: @default, @oswald-medium, @helveticaneue, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+main + main {
+    margin-top: 4rem;
+}

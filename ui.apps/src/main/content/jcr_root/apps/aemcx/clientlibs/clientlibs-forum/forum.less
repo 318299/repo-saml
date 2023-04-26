@@ -1,0 +1,87 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+
+.scf {
+    font-family: @raleway-medium, @raleway-light;
+    color: @white;
+
+    &-forum-paste-grp {
+        .dropdown-toggle {
+            min-width: 25px;
+            border-left: 0;
+        }
+
+        button {
+            float: left;
+            position: relative;
+        }
+    }
+
+    .scf-action-container .scf-action-item {
+        margin-left: 2rem;
+    }
+
+    .btn {
+        border-radius: 30px;
+        background-color: transparent;
+        cursor: pointer;
+        color: @white;
+        border: 1px solid @weborange;
+        padding: 0.5rem 1rem;
+
+        &:after {
+            content: "  > ";
+        }
+
+        &:hover {
+            color: @weborange;
+        }
+    }
+
+    h3 {
+        color: @weborange;
+    }
+
+    h2 {
+        font-size: 6.5rem;
+        margin-left: 2rem;
+        color: @white;
+    }
+
+    .scf-topic-listitem a {
+        color: @weborange;
+    }
+
+    .scf-sort-btngrp {
+
+        .scf-sort-list {
+            display: none;
+            position: absolute;
+            z-index: 100;
+            background: @eclipse;
+
+             &:hover {
+                display: block;
+             }
+        }
+
+        &:hover {
+            .scf-sort-list {
+                display: block;
+            }
+        }
+    }
+
+    .scf-comment-msg > a {
+        &:after {
+            content: '>';
+        }
+    }
+
+    .scf-breadcrumb {
+        color: @white;
+
+        a {
+            color: @white;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="98d8ff47-1573-37e0-970d-fb180faa3c23"
+    rep:authorizableId="aemcx-emailread-service"
+    rep:principalName="aemcx-emailread-service"/>

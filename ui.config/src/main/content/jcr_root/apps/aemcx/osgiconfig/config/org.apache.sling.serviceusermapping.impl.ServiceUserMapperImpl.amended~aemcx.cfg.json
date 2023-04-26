@@ -1,0 +1,7 @@
+{
+    "user.mapping": [
+        "aemcx.core:aemcx-catalogreadservice=aemcx-catalogreadservice",
+        "aemcx.core:aemcx-newsletterwrite-service=aemcx-newsletterwrite-service",
+        "aemcx.core:aemcx-emailread-service=aemcx-emailread-service"
+    ]
+}

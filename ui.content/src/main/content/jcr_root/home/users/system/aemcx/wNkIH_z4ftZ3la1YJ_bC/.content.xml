@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="9017e703-062a-314d-bd57-86b532724109"
+    rep:authorizableId="aemcx-newsletterwrite-service"
+    rep:principalName="aemcx-newsletterwrite-service"/>

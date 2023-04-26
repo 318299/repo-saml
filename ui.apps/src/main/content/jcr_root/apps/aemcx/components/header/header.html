@@ -1,0 +1,36 @@
+<div class="cmp-header" data-is-publish="${wcmmode.disabled ? 'true' : 'false'}">
+    <div class="cmp-header__top">
+        <div class="cmp-header__logo">
+            <img class="logo-signature"
+                 src="/etc.clientlibs/aemcx/clientlibs/clientlib-site/resources/img/aemcx-logo.svg"
+                 alt="AEMCX logo"/>
+        </div>
+
+        <i class="cx-fs-5 icon-search" data-toggle="modal" data-target="#aemcx-search"></i>
+
+        <div class="cmp-header__menu">
+            <i class="cx-fs-5 icon-menu cmp-header__menu-trigger"></i>
+
+            <div class="cmp-header__menu-list">
+                <div class="cmp-header__user"
+                     data-sly-resource="${'user' @ resourceType='aemcx/components/user-status'}">
+                </div>
+
+                <!-- Mobile navigation  -->
+                <div data-sly-test="${resource['navigation/jcr:primaryType']}"
+                     class="cmp-header__navigation"
+                     data-sly-resource="${'navigation' @ resourceType='aemcx/components/navigation'}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tablet/Desktop navigation   -->
+    <div data-sly-test="${resource['navigation/jcr:primaryType']}"
+         class="cmp-header__navigation"
+         data-sly-resource="${'navigation' @ resourceType='aemcx/components/navigation'}">
+    </div>
+
+    <!-- Search modal -->
+    <sly data-sly-include="search-modal.html"/>
+</div>

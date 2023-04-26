@@ -1,0 +1,55 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_mixins.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_responsive.less";
+
+.cmp-styling {
+
+    .style-items {
+        display: grid;
+        column-gap: 2rem;
+        row-gap: 2rem;
+
+        &.columns {
+            grid-template-columns: 1fr 1fr ;
+        }
+
+    }
+
+    .style-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .onDesktop({
+            grid-template-columns: 1fr 3fr;
+        });
+    }
+
+    .color {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .color-item {
+        width: 4rem;
+        height: 4rem;
+        display: inline-block;
+        // box-shadow: -5px 0px 20px 0px fade(@nobel, 90%);
+        border: 1px solid @white;
+        background-color: currentColor;
+        border-radius: 50%;
+    }
+
+    // Typography
+    .fonts {
+        display: grid;
+        row-gap: 2rem;
+    }
+
+    .ellipsis {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+}

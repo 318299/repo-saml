@@ -1,0 +1,14 @@
+<div class="cmp-catalog">
+    <div class="cmp-catalog__placeholder">
+        <sly data-sly-test.authoredComponent="${resource['placeholder/jcr:primaryType']}"
+             data-sly-use.placeholder="${'placeholder'}"
+             data-sly-resource="${placeholder.children[0] @ decoration=true}"/>
+
+        <sly data-sly-test="${!authoredComponent}"
+             data-sly-resource="${'placeholder' @ resourceType='wcm/foundation/components/parsys'}"/>
+    </div>
+
+    <div class="cmp-catalog__config">
+        <sly data-sly-resource="${'config' @ resourceType='core/wcm/components/tabs/v1/tabs'}"/>
+    </div>
+</div>

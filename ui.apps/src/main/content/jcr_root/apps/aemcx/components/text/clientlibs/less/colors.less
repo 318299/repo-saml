@@ -1,0 +1,13 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_mixins.less";
+
+.cmp-text {
+    .for(@colors); .-each(@color) {
+        @name: extract(@color,1);
+        @hex: extract(@color,2);
+
+        .@{name} {
+            color: @hex;
+        }
+    }
+}

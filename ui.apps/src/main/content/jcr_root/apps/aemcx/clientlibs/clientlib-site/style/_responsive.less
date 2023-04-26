@@ -1,0 +1,18 @@
+//default when mobile first
+.onMobile(@rules) {
+    @media screen and (max-width: @mobile) {
+        @rules();
+    }
+};
+
+.onTablet(@rules) {
+    @media screen and (min-width: (@tablet + 1)) {
+        @rules();
+    }
+};
+
+.onDesktop(@rules) {
+    @media screen and (min-width: (@desktop + 1)) {
+        @rules();
+    }
+};

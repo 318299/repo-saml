@@ -1,0 +1,54 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_responsive.less";
+
+.cmp-newsletter {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+
+    .onTablet({
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+    });
+
+    &__text {
+        display: flex;
+        align-items: center;
+    }
+
+    &__form {
+        display: flex;
+
+        .onTablet({
+            max-width: 80%;
+        });
+    }
+
+    &__form-input {
+        padding: 1rem;
+        width: 100%;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 5rem;
+        box-sizing: border-box;
+        background-color: @grey17;
+        color: @white;
+        outline: none;
+        opacity: 0.3;
+
+        &::placeholder {
+             color: white;
+             opacity: 1; /* Firefox */
+        }
+    }
+
+    .icon {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        opacity: 0.3;
+        font-size: 2.8rem;
+    }
+}

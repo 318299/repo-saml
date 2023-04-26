@@ -1,0 +1,21 @@
+<div class="cmp-properties"
+     data-sly-use.model="com.aemcx.core.models.ComponentProperties">
+    <div class="cmp-properties__separator"
+         data-sly-repeat.properties="${model.properties}">
+        <ol class="cmp-properties__wrapper"
+            data-sly-list.property="${properties}">
+            <li class="cmp-properties__property cx-fs-2">
+                <span>${property}</span>
+                <span>${properties[property]}</span>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<!--
+    1. Return all props except:
+        jcr:created
+        jcr:createdBy
+        jcr:lastModified
+        jcr:lastModifiedBy
+-->

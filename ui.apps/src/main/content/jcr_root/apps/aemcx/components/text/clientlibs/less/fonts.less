@@ -1,0 +1,13 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_mixins.less";
+
+.cmp-text {
+    .for(@fonts); .-each(@font) {
+        @name: extract(@font,1);
+        @family: extract(@font,2);
+
+        .@{name} {
+            font-family: @family;
+        }
+    }
+}

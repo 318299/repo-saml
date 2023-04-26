@@ -1,0 +1,60 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+
+.cmp-filter {
+    background-color: fade(@black, 80%);
+    padding: 2rem;
+    color: @white;
+
+    &__menu-trigger {
+       ~ .cmp-filter__wrapper {
+            display: none;
+
+            &.active {
+                display: grid;
+            }
+        }
+    }
+
+    &__item-link {
+        color: @white;
+        padding: 0.5rem 0;
+    }
+
+    &__button {
+        border: 1px solid #ffa300;
+        background: none;
+        color: white;
+        padding: 0 2rem;
+        width: fit-content;
+        border-radius: 2rem;
+        margin-top: 2rem;
+        line-height: 3rem;
+    }
+
+    &__checkbox {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid @white;
+        line-height: 2rem;
+        font-size: 2rem;
+        position: absolute;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:checked::after {
+            content: "\e908";
+            font-family: 'icomoon' !important;
+            color: @white;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__item-link-text {
+        margin-left: 3rem;
+    }
+}

@@ -1,0 +1,16 @@
+<div data-sly-use.cardModel="com.aemcx.core.models.CardModel"
+     class="cmp-card">
+    <div class="cmp-card__title" data-sly-test.title="${cardModel.item.title}">
+        <a class="cmp-card__title-link cx-fs-4" href="${cardModel.item.URL}">${title}</a>
+        <a class="cmp-card__tag cx-fs-2 raleway-light"
+           data-sly-test="${cardModel.tag}"
+           href="${currentPage.path}.html?tags=${cardModel.tag.titlePath}">
+           ${cardModel.tag.title}
+        </a>
+    </div>
+    <div class="cmp-card__image" data-sly-test="${cardModel.imageResource}" data-sly-resource="${cardModel.imageResource}"></div>
+    <div class="cmp-card__description raleway-light">
+        <p data-sly-test.description="${cardModel.item.description}">${description @ context="html"}</p>
+        <a class="cmp-card__link" href="${cardModel.item.URL}">${'Read More > ' @ i18n}</a>
+    </div>
+</div>

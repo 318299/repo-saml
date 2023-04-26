@@ -1,0 +1,9 @@
+<div class="cmp-newsletter">
+    <div class="cmp-newsletter__text"
+         data-sly-resource="${'text' @ resourceType='aemcx/components/text'}">
+    </div>
+    <form method="POST" action="${resource.path}.subscribe" class="cmp-newsletter__form">
+        <input class="cmp-newsletter__form-input" type="email" name="email" placeholder="${'Your Email Address' @ i18n}"/>
+        <i class="icon" aria-hidden="true"></i>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+<div class="cmp-icon-text">
+    <div class="cmp-icon-text__icon"
+         data-sly-test.icon="${properties.Icon ? properties.Icon : 'experience'}">
+        <img src="/etc.clientlibs/aemcx/clientlibs/clientlib-site/resources/icons/${icon}.svg"
+             alt="${icon}">
+    </div>
+    <div data-sly-test.description="${properties.description}"
+         class="cmp-icon-text__description">
+        ${description @ context ='html'}
+    </div>
+</div>

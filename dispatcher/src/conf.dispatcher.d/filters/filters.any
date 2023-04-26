@@ -1,0 +1,87 @@
+#
+# This file contains the filter ACL, and can be customized.
+#
+# By default, it includes the default filter ACL.
+#
+
+$include "./default_filters.any"
+
+# Allow components JSON model
+/0101 { /type "allow" /extension "json" /selectors "model" /path "/content/*" }
+
+# Allow manifest.webmanifest files located in the content
+/0102 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
+
+
+# For Enablement features
+/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
+/0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
+/0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
+/0173 { /type "allow" /url "/content/sites/*" }
+/0174 { /type "allow" /url "/content/communities/scorm/*" }
+/0175 { /type "allow" /url "/content/sites/*" }
+/0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
+/0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
+
+# Allow SAML HTTP POST to ../saml_login end points
+/0190 { /type "allow" /method "POST" /url "*/saml_login" }
+
+# ContextHub
+/0200 { /type "allow" /url "*/contexthub.pagedata.json" }
+/0201 { /type "allow" /url "/home/users/*.infinity.json" }
+
+/006 { /type "allow" /url "/system/sling/logout.html*" }  # allow OSGi console
+
+/007 { /type "allow" /url "/content*" }  # disable this rule to allow mapped content only
+/008 { /type "allow" /url "/libs/*"   }
+/009 { /type "deny"  /url "/libs/shindig/proxy*" } # if you enable /libs close access to proxy
+
+/0021 { /type "allow" /extension '(clientlibs|css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html|mp4|mov|m4v)' /path "/content/*" }  
+
+# Added for SDI
+/0022 { /type "allow" /url "/conf/aemcx/*" }
+/0023 { /type "allow" /url "/conf/*" }
+
+############################################
+# AEMCX - targeting necessities
+############################################
+/0040 { /type "allow" /url "/etc/cloudsettings*" }
+/0041 { /type "allow" /url "/etc/segmentation*" }
+/0042 { /type "allow" /url "/home/users/aemcx-users/*"}
+
+
+#######################################
+## BEGIN: AEM COMMUNITITES ADDITIONS
+#######################################
+#forum/comunities
+/0043 { /type "allow" /url "/communities/moderation.html/*"}
+/0044 { /type "allow" /url "/mnt/overlay/*"}
+
+# Enable CSRF token otherwise nothings works.
+/5001 { /type "allow" /url "/libs/granite/csrf/token.json" }
+
+# Allow SCF User Model to bootstrap as it depends on the granite user
+/5002 { /type "allow" /url "/libs/granite/security/currentuser.json*" }
+
+# Allow i18n to load correctly
+/5004 { /type "allow" /url "/libs/cq/i18n/dict.en.json *" }
+
+# Allow social json get pattern.
+/6002 { /type "allow" /url "*.social.*.json*" }
+
+# Allow loading of templates
+/6003 { /type "allow" /url "/services/social/templates*" }
+
+# Allow SCF User model to check moderator rules
+/6005 { /type "allow" /url "/services/social/getLoggedInUser?moderatorCheck=*" }
+	 
+# Allow CKEditor to load which uses a query pattern not sufficed by regular glob above.
+/6006 { /type "allow" /url "/etc/clientlibs/social/thirdparty/ckeditor/*.js?t=*" }
+/6007 { /type "allow" /url "/etc/clientlibs/social/thirdparty/ckeditor/*.css?t=*" }
+
+# Allow Fonts from Communities to load
+/6050 { /type "allow" /url "*.woff *" }
+/6051 { /type "allow" /url "*.ttf *" }
+	 
+# Enable CQ Security checkpoint for component guide.
+/7001 { /type "allow" /url "/libs/cq/security/userinfo.json?cq_ck=*"}

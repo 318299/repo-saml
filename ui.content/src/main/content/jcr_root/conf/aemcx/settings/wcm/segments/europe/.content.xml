@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Europe"
+        sling:resourceType="cq/contexthub/components/segment-page"
+        segmentBoost="{Long}0"
+        segmentName="europe">
+        <traits
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/contexthub/components/traits/logic/operator-and">
+            <andpar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <script
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/contexthub/components/traits/generic-comparison/type/script"
+                    function="Europe"/>
+            </andpar>
+        </traits>
+    </jcr:content>
+</jcr:root>

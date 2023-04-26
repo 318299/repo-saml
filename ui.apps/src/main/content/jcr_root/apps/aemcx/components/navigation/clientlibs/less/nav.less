@@ -1,0 +1,27 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_responsive.less";
+
+.cmp-navigation {
+    &__item {
+        font-size: 1.6rem;
+
+        .onTablet({
+            display: inline;
+
+            &:not(:first-of-type) {
+                padding-left: 2rem;
+            }
+        });
+    }
+
+    &__item--active {
+        .cmp-navigation__item-link {
+            border-bottom: 1px solid @weborange;
+        }
+    }
+
+    &__item-link:hover {
+        text-decoration: none;
+        border-bottom: 1px solid @weborange;
+    }
+}

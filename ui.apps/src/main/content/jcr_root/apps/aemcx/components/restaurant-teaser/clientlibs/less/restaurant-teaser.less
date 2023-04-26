@@ -1,0 +1,52 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_responsive.less";
+
+.restaurant-teaser {
+    .cmp-teaser {
+        display: grid;
+
+        .onTablet({
+            grid-template-columns: 1fr 1fr;
+        });
+
+    }
+
+    .cmp-teaser__image {
+        order: 2;
+        height: 400px;
+        position: relative;
+
+        &:after {
+            content: '';
+            border: 8px solid orange;
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            z-index: 100;
+            left: 5%;
+            top: 5%;
+        }
+    }
+
+    .cmp-image__image {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cmp-teaser__content {
+        order: 1;
+
+        .cmp-teaser__title {
+            text-align: center;
+            font-family: @cutterlinesdemo;
+            font-size: 6rem;
+        }
+
+        a {
+            color: @weborange;
+        }
+    }
+
+}

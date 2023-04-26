@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/aemcx-packages"/>
+    <filter root="/apps/aemcx-vendor-packages"/>
+    <filter root="/apps/aemcx/clientlibs"/>
+    <filter root="/apps/aemcx/components"/>
+    <filter root="/apps/aemcx/i18n"/>
+    <filter root="/apps/aemcx/contexthub"/>
+    <filter root="/apps/rep:policy"/>
+    <filter root="/libs/rep:policy"/>
+    <!--<filter root="/apps/aemcx/osgiconfig"/>-->
+</workspaceFilter>

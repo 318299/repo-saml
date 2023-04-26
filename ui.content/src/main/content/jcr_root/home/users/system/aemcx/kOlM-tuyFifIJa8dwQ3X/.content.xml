@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="8a5ccf9b-d6c8-3158-9096-939efa439afb"
+    rep:authorizableId="aemcx-catalogreadservice"
+    rep:principalName="aemcx-catalogreadservice"/>

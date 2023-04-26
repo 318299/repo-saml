@@ -1,0 +1,59 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_responsive.less";
+
+.cmp-footer {
+    padding: 2rem;
+    background-color: @eclipse;
+    color: @white;
+
+    .onTablet({
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 4rem;
+    });
+
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .onTablet({
+            flex-direction: row;
+        });
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+
+        [class^='icon-'] {
+            color: @weborange;
+        }
+
+        .onTablet({
+            flex-direction: row;
+        });
+    }
+
+    &__link {
+        padding-left: 2rem;
+
+        &--copyright {
+            display: none;
+
+            .onTablet({
+                display: block;
+            });
+        }
+
+        &--separator {
+        .onTablet({
+                    border-right: 1px solid #fff;
+                    padding-right: 2rem;
+                });
+        }
+    }
+}

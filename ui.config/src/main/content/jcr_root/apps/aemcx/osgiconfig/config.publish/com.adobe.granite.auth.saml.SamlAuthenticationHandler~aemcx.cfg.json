@@ -1,0 +1,39 @@
+{
+  "path": [
+    "/content/aemcx",
+    "/content/aemtraining",
+    "/bin/permissioncheck"	
+  ],
+  "service.ranking": 5002,
+  "idpUrl": "https://login.microsoftonline.com/0e4c9254-5dbe-4b4f-97ae-9bbf04916397/saml2",
+  "idpCertAlias": "certalias___1671811079781",
+  "keyStorePassword": "admin",
+  "userIDAttribute": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
+  "defaultGroups": [
+    "aemcx-observers"
+  ],
+  "idpHttpRedirect": "false",
+  "identitySyncType": "default",
+  "createUser": "true",
+  "defaultRedirectUrl": "/",
+  "idpIdentifier": "",
+  "assertionConsumerServiceURL": "https://publish-p87305-e741707.adobeaemcloud.com/content/aemcx/saml_login",
+  "signatureMethod": "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+  "addGroupMemberships": "true",
+  "digestMethod": "http://www.w3.org/2001/04/xmlenc#sha256",
+  "synchronizeAttributes": [
+    "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress=profile/email",
+    "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname=profile/firstName",
+    "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname=profile/lastName",
+    "country=profile/countryCode"
+  ],
+  "groupMembershipAttribute": "http://schemas.microsoft.com/ws/2008/06/identity/claims/groups",
+  "logoutUrl": "https://login.microsoftonline.com/0e4c9254-5dbe-4b4f-97ae-9bbf04916397/saml2",
+  "serviceProviderEntityId": "AEMCX",
+  "handleLogout": "true",
+  "userIntermediatePath": "aemcx-users",
+  "spPrivateKeyAlias": "aemcx-alias",
+  "useEncryption": "false",
+  "clockTolerance": 60,
+  "nameIdFormat": "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
+}

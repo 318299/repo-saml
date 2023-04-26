@@ -1,0 +1,28 @@
+.cmp-carousel {
+    padding-bottom: 2rem;
+
+    .cmp-carousel__actions {
+        display: none;
+    }
+
+    .cmp-carousel__indicators {
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .cmp-carousel__indicator {
+        width: 50px;
+        height: 7px;
+        border-radius: 0;
+        background-color: #ADADAD;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &--active {
+            height: 10px;
+            background-color: #FFA300;
+        }
+    }
+}

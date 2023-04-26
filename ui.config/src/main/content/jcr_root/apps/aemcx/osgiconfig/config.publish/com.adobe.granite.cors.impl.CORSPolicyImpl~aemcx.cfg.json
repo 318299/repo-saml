@@ -1,0 +1,35 @@
+{
+  "supportscredentials":true,
+  "exposedheaders":[
+    ""
+  ],
+  "supportedmethods":[
+    "GET",
+	"HEAD",
+    "POST"
+  ],
+  "alloworigin":[
+	"https://login.microsoftonline.com"
+  ],
+  "maxage:Integer":1800,  
+  "alloworiginregexp":[
+    "http://localhost:.*"
+  ],
+  "allowedpaths":[
+    "/saml_login",
+	"/content/aemcx/.*",
+	"/content/aemtraining/.*",
+	"/libs/granite/csrf/token.json"
+  ],
+  "supportedheaders":[
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+	"Authorization",
+	"CSRF-Token",
+	"Access-Control-Allow-Origin"
+  ]
+}

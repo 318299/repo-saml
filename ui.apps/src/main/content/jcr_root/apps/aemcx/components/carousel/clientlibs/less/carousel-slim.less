@@ -1,0 +1,44 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+
+.cmp-carousel--slim {
+    .cmp-carousel__actions {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+
+    .cmp-carousel__action {
+        border: none;
+        background-color: fade(@nightrider, 50%);
+        color: @white;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .cmp-carousel__action--previous:before {
+        content: '<';
+    }
+
+    .cmp-carousel__action--next {
+        right: 0;
+        position: absolute;
+
+        &:before {
+            content: '>';
+        }
+    }
+
+    .cmp-carousel__action-text {
+        display: none;
+    }
+
+    .cmp-carousel__indicators {
+        display: none
+    }
+
+    .cmp-carousel__item {
+        max-height: 400px;
+        overflow: hidden;
+    }
+}

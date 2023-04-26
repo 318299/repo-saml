@@ -1,0 +1,14 @@
+<div class="cmp-user-status"
+     data-sly-use.user="com.aemcx.core.models.UserStatusModel">
+    <div data-sly-test="${currentSession.userID}" class="cmp-user-status__menu">
+        <div class="cmp-user-status__details">
+            <div class="cmp-user-status__welcome">${'Welcome' @ i18n}</div>
+            <div>${user.userDisplay}</div>
+
+            <a class="cmp-user-status__sign-out" href="/system/sling/logout.html?resource=/content/aemcx.html">
+                ${'Sign Out' @ i18n}
+            </a>
+        </div>
+        <i class="cmp-user-status__avatar icon-avatar"></i>
+    </div>
+</div>

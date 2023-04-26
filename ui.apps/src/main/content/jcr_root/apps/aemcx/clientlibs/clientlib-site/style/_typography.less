@@ -1,0 +1,26 @@
+/*
+    Available font sizes.
+ */
+@fontUnit: 0.6rem;
+@iterations: 10;
+
+.generateFontSizes (@i) when (@i > 1) {
+    .cx-fs-@{i} {
+        font-size: @i * @fontUnit;
+    }
+    .generateFontSizes(@i - 1);
+}
+
+.generateFontSizes (@iterations);
+
+/*
+    Font families.
+*/
+.for(@fonts); .-each(@font) {
+    @name: extract(@font,1);
+    @family: extract(@font,2);
+
+    .@{name} {
+        font-family: @family;
+    }
+}

@@ -1,0 +1,50 @@
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_variables.less";
+@import (once) "/apps/aemcx/clientlibs/clientlib-site/style/_responsive.less";
+
+.cmp-card {
+    --padding: 2rem 3rem;
+
+    background-color: fade(@black, 80%);
+    color: @white;
+    transition: .5s;
+
+    &:hover {
+        transform: scale(1.01, 1.01);
+    }
+
+    &__title {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin: 0;
+        padding: var(--padding);
+    }
+
+    &__tag {
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        border: 1px solid @weborange;
+        justify-self: end;
+        color: @white;
+
+        &:after {
+        }
+    }
+
+    &__link {
+        color: @weborange;
+    }
+
+    &__title-link {
+        height: 100%;
+        color: @weborange;
+        display: block;
+    }
+
+    &__description {
+        padding: var(--padding);
+        line-height: 2.5rem;
+        color: @white;
+    }
+
+}
