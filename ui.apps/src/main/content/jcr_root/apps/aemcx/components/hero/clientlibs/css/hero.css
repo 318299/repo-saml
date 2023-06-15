@@ -20,21 +20,22 @@
 }
 .hero-btn{
     border: none;
-    background-color: inherit;
+    background-color: #222222;
     padding: 0vw 1vw;
     font-size: 1.25vw;
     cursor: pointer;
     display: inline-block;
     color: orange;
+    margin-top: 10vw;
 }
 @media only screen and (min-width:801px){
     .p1{
         font-size: 2.8vw;
         position: absolute;
         top: -4vw;
-        left: 5vw;
+        left: 4vw;
         color: rgb(217, 173, 115);
-        background-color: black;
+        background-color: #222222;
         font-weight: bold;
         padding: 1vw 2vw;
     }
@@ -59,7 +60,7 @@
         padding: 0vw 1vw;
         font-size: 2.8vw;
         color: rgb(217, 173, 115);
-        background-color: black;
+        background-color: #222222;
         font-weight: bold;
     }
     .paragraph{
