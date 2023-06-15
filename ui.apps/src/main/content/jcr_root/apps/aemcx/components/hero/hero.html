@@ -1,0 +1,22 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories=['aemcx.components.hero'] }"/>
+</sly>
+<div class="hero-container">
+    <img src=${properties.linkURL} class="hero-img" height="${properties.height}%" width="${properties.width}%">
+    <div class="text-block">
+        <div class="p1"><b>${properties.title}</b></div>
+        <br>
+        <div class="paragraph">${properties.paragraph}</div>
+        <br>
+        <div class="p2">
+            <button class="hero-btn">
+                <a href="${properties.link}">
+                    <p class="p-block__link">
+                        <span class="c-btn-text-arrow c-btn-text-arrow--white">${properties.buttontext} <span class="next-arrow">&#62;</span>
+                        </span>
+                    </p>
+                </a>
+            </button>
+        </div>
+    </div>
+</div>

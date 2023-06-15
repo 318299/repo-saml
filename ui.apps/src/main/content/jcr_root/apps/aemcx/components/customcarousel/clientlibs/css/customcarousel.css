@@ -1,0 +1,111 @@
+section.main {
+    text-align: center;
+    margin-top: 2.5%;
+    font-family: 'raleway-regular','oswald-medium','helveticaneue',sans-serif; !important;
+}
+.scroll-arrow {
+    width: 3%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    padding:0;
+    margin-right: 0.5vw;
+    opacity: 0.5;
+    font-size: 4vw;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+.scroll-arrow:hover {
+    transition: 0.2s;
+    opacity:1;
+}
+#imgList {
+    width: 80%;
+    scroll-behavior: smooth;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+#imgList::-webkit-scrollbar {
+    display: none;
+  }
+.carousellist {
+        list-style: none;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        width: 20%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        transition: 0.2s;
+        background-color: #222222;
+  }
+.carousellist, img {
+    width: 28vw;
+    height: 27.5vw;
+}
+.p-panel-bg-img:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+  }
+.p-panel-bg-img__body{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 1.2vw 2vw;
+    width: 100%;
+    color: #ffffff;
+    background-color: black;
+    opacity: 0.8;
+}
+.p-panel-bg-img__body.js-match-height {      
+  display: flex;
+  flex-direction: column;
+}
+.p-panel-bg-img__body.js-match-height .c-head-md {
+    margin-bottom: 0.4vw;
+    line-height: 1.5;
+    opacity: 1 !important;
+}
+h3.c-head-md{
+    color: #fff;
+    font-size: 2.6vw;
+    font-weight: bolder;
+    opacity: 1 !important;
+}
+.p-panel-bg-img__body.js-match-height-01 .p-block__link {
+    margin-top: auto;
+    padding-top: 1.875vw;
+    opacity: 1 !important;
+}
+.p-panel-bg-img { 
+    color: #fff;
+    scroll-behavior: smooth;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.p-panel-bg-img a {
+    display: block;
+    text-decoration: none;
+}    
+.c-btn-text-arrow.c-btn-text-arrow--white{
+    color: orange;
+    font-size: 1.2vw;
+    font-weight: bold;
+    opacity: 1 !important;
+} 
+.c-btn-text-arrow.c-btn-text-arrow--white:hover .next-arrow{
+    padding-left: 1vw;
+    transition: 5s;
+}

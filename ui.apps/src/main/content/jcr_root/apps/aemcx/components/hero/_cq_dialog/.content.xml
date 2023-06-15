@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Hero - Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem6_5_docs_component_en#Title">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Leave empty to use the page title."
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <file
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="Image asset"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./file"
+                        title="Upload Image Asset"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    <linkURL
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Make the image a link to another resource."
+                        fieldLabel="Image Link"
+                        name="./linkURL"
+                        rootPath="/content"
+                        wrapperClass="cmp-image--editor-link"/>
+                    <size
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/sizefield"
+                        fieldLabel="Size (less than 300vw)">
+                        <width
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                            defaultValue="\0"
+                            emptyText="Width"
+                            fieldLabel="Width of Image"
+                            name="./width"/>
+                        <height
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                            defaultValue="\0"
+                            emptyText="Height"
+                            fieldLabel="Height of Image"
+                            name="./height"/>
+                    </size>
+                    <textarea
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                        fieldLabel="Enter your Text"
+                        name="./paragraph"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="The text to display on the button."
+                        fieldLabel="Text on the button"
+                        name="./buttontext"/>
+                    <link
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                        fieldDescription="Link to a content page, external URL or page anchor."
+                        fieldLabel="Redirection Link"
+                        name="./link"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

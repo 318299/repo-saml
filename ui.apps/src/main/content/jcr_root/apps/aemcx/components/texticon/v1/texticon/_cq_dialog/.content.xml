@@ -62,254 +62,254 @@
                                 useFixedInlineToolbar="{Boolean}true">
                                 <rtePlugins jcr:primaryType="nt:unstructured">
                                     <format
-                                            jcr:primaryType="nt:unstructured"
-                                            features="bold,italic"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        features="bold,italic"/>
                                     <justify
-                                            jcr:primaryType="nt:unstructured"
-                                            features="-"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        features="-"/>
                                     <links
-                                            jcr:primaryType="nt:unstructured"
-                                            features="modifylink,unlink"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        features="modifylink,unlink"/>
                                     <lists
-                                            jcr:primaryType="nt:unstructured"
-                                            features="*"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
                                     <misctools jcr:primaryType="nt:unstructured">
                                         <specialCharsConfig jcr:primaryType="nt:unstructured">
                                             <chars jcr:primaryType="nt:unstructured">
                                                 <default_copyright
-                                                        jcr:primaryType="nt:unstructured"
-                                                        entity="&amp;copy;"
-                                                        name="copyright"/>
+                                                    jcr:primaryType="nt:unstructured"
+                                                    entity="&amp;copy;"
+                                                    name="copyright"/>
                                                 <default_euro
-                                                        jcr:primaryType="nt:unstructured"
-                                                        entity="&amp;euro;"
-                                                        name="euro"/>
+                                                    jcr:primaryType="nt:unstructured"
+                                                    entity="&amp;euro;"
+                                                    name="euro"/>
                                                 <default_registered
-                                                        jcr:primaryType="nt:unstructured"
-                                                        entity="&amp;reg;"
-                                                        name="registered"/>
+                                                    jcr:primaryType="nt:unstructured"
+                                                    entity="&amp;reg;"
+                                                    name="registered"/>
                                                 <default_trademark
-                                                        jcr:primaryType="nt:unstructured"
-                                                        entity="&amp;trade;"
-                                                        name="trademark"/>
+                                                    jcr:primaryType="nt:unstructured"
+                                                    entity="&amp;trade;"
+                                                    name="trademark"/>
                                             </chars>
                                         </specialCharsConfig>
                                     </misctools>
                                     <paraformat
-                                            jcr:primaryType="nt:unstructured"
-                                            features="*">
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*">
                                         <formats jcr:primaryType="nt:unstructured">
                                             <default_p
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Paragraph"
-                                                    tag="p"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Paragraph"
+                                                tag="p"/>
                                             <default_h1
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Heading 1"
-                                                    tag="h1"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 1"
+                                                tag="h1"/>
                                             <default_h2
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Heading 2"
-                                                    tag="h2"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 2"
+                                                tag="h2"/>
                                             <default_h3
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Heading 3"
-                                                    tag="h3"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 3"
+                                                tag="h3"/>
                                             <default_h4
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Heading 4"
-                                                    tag="h4"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 4"
+                                                tag="h4"/>
                                             <default_h5
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Heading 5"
-                                                    tag="h5"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 5"
+                                                tag="h5"/>
                                             <default_h6
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Heading 6"
-                                                    tag="h6"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 6"
+                                                tag="h6"/>
                                             <default_blockquote
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Quote"
-                                                    tag="blockquote"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Quote"
+                                                tag="blockquote"/>
                                             <default_pre
-                                                    jcr:primaryType="nt:unstructured"
-                                                    description="Preformatted"
-                                                    tag="pre"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Preformatted"
+                                                tag="pre"/>
                                         </formats>
                                     </paraformat>
                                     <table
-                                            jcr:primaryType="nt:unstructured"
-                                            features="-">
+                                        jcr:primaryType="nt:unstructured"
+                                        features="-">
                                         <hiddenHeaderConfig
-                                                jcr:primaryType="nt:unstructured"
-                                                hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
-                                                hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                            jcr:primaryType="nt:unstructured"
+                                            hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                            hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
                                     </table>
                                     <tracklinks
-                                            jcr:primaryType="nt:unstructured"
-                                            features="*"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
                                     <styles
-                                            jcr:primaryType="nt:unstructured"
-                                            features="*">
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*">
                                         <styles jcr:primaryType="cq:WidgetCollection">
                                             <cutterlinesdemo
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cutterlinesdemo"
-                                                    text="CutterlinesDemo"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cutterlinesdemo"
+                                                text="CutterlinesDemo"/>
                                             <raleway-regular
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="raleway-regular"
-                                                    text="Raleway Regular"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="raleway-regular"
+                                                text="Raleway Regular"/>
                                             <raleway-medium
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="raleway-medium"
-                                                    text="Raleway Medium"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="raleway-medium"
+                                                text="Raleway Medium"/>
                                             <raleway-light
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="raleway-light"
-                                                    text="Raleway Light"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="raleway-light"
+                                                text="Raleway Light"/>
                                             <helveticaneue
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="helveticaneue"
-                                                    text="Helvetica Neue"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="helveticaneue"
+                                                text="Helvetica Neue"/>
                                             <oswald-medium
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="oswald-medium"
-                                                    text="Oswald Medium"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="oswald-medium"
+                                                text="Oswald Medium"/>
                                             <oswald-light
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="oswald-light"
-                                                    text="Oswald Light"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="oswald-light"
+                                                text="Oswald Light"/>
                                             <fontsize1
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-1"
-                                                    text="Fontsize 1"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-1"
+                                                text="Fontsize 1"/>
                                             <fontsize2
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-2"
-                                                    text="Fontsize 2"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-2"
+                                                text="Fontsize 2"/>
                                             <fontsize3
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-3"
-                                                    text="Fontsize 3"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-3"
+                                                text="Fontsize 3"/>
                                             <fontsize4
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-4"
-                                                    text="Fontsize 4"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-4"
+                                                text="Fontsize 4"/>
                                             <fontsize5
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-5"
-                                                    text="Fontsize 5"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-5"
+                                                text="Fontsize 5"/>
                                             <fontsize6
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-6"
-                                                    text="Fontsize 6"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-6"
+                                                text="Fontsize 6"/>
                                             <fontsize7
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-7"
-                                                    text="Fontsize 7"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-7"
+                                                text="Fontsize 7"/>
                                             <fontsize8
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-8"
-                                                    text="Fontsize 8"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-8"
+                                                text="Fontsize 8"/>
                                             <fontsize9
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="cx-fs-9"
-                                                    text="Fontsize 9"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="cx-fs-9"
+                                                text="Fontsize 9"/>
                                             <tundora
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="tundora"
-                                                    text="Tundora #444444"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="tundora"
+                                                text="Tundora #444444"/>
                                             <pomegranatea
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="pomegranatea"
-                                                    text="Pomegranatea #EF2E2E"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="pomegranatea"
+                                                text="Pomegranatea #EF2E2E"/>
                                             <weborange
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="weborange"
-                                                    text="WebOrange #FFA300"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="weborange"
+                                                text="WebOrange #FFA300"/>
                                             <nightrider
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="nightrider"
-                                                    text="Night Rider #333333"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="nightrider"
+                                                text="Night Rider #333333"/>
                                             <nero
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="nero"
-                                                    text="Nero #262626"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="nero"
+                                                text="Nero #262626"/>
                                             <mineshaft
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="mineshaft"
-                                                    text="Mineshaft #353535"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="mineshaft"
+                                                text="Mineshaft #353535"/>
                                             <eclipse
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="eclipse"
-                                                    text="Eclipse #3F3F3F"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="eclipse"
+                                                text="Eclipse #3F3F3F"/>
                                             <white
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="white"
-                                                    text="White #FFFFFF"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="white"
+                                                text="White #FFFFFF"/>
                                             <nobel
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="nobel"
-                                                    text="Nobel #A0A0A0"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="nobel"
+                                                text="Nobel #A0A0A0"/>
                                             <grey
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="grey"
-                                                    text="Grey #757575"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="grey"
+                                                text="Grey #757575"/>
                                             <suvagrey
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="suvagrey"
-                                                    text="SuvaGrey #8E8E8E"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="suvagrey"
+                                                text="SuvaGrey #8E8E8E"/>
                                             <codgray
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="codgray"
-                                                    text="CodGray #141414"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="codgray"
+                                                text="CodGray #141414"/>
                                             <black
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="black"
-                                                    text="Black #000000"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="black"
+                                                text="Black #000000"/>
                                             <silverchalice
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="silverchalice"
-                                                    text="Silver Chalice #9E9E9E"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="silverchalice"
+                                                text="Silver Chalice #9E9E9E"/>
                                             <sunshade
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="sunshade"
-                                                    text="SunShade #FEA328"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="sunshade"
+                                                text="SunShade #FEA328"/>
                                             <grey17
-                                                    jcr:primaryType="nt:unstructured"
-                                                    cssName="grey17"
-                                                    text="Grey #2B2B2B"/>
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="grey17"
+                                                text="Grey #2B2B2B"/>
                                         </styles>
                                     </styles>
                                 </rtePlugins>
                                 <uiSettings jcr:primaryType="nt:unstructured">
                                     <cui jcr:primaryType="nt:unstructured">
                                         <inline
-                                                jcr:primaryType="nt:unstructured"
-                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat,#styles]">
+                                            jcr:primaryType="nt:unstructured"
+                                            toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat,#styles]">
                                             <popovers jcr:primaryType="nt:unstructured">
                                                 <justify
-                                                        jcr:primaryType="nt:unstructured"
-                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
-                                                        ref="justify"/>
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                    ref="justify"/>
                                                 <lists
-                                                        jcr:primaryType="nt:unstructured"
-                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
-                                                        ref="lists"/>
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                    ref="lists"/>
                                                 <paraformat
-                                                        jcr:primaryType="nt:unstructured"
-                                                        items="paraformat:getFormats:paraformat-pulldown"
-                                                        ref="paraformat"/>
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="paraformat:getFormats:paraformat-pulldown"
+                                                    ref="paraformat"/>
                                                 <styles
-                                                        jcr:primaryType="nt:unstructured"
-                                                        items="styles:getStyles:styles-pulldown"
-                                                        ref="styles"/>
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="styles:getStyles:styles-pulldown"
+                                                    ref="styles"/>
                                             </popovers>
                                         </inline>
                                         <tableEditOptions
-                                                jcr:primaryType="nt:unstructured"
-                                                toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                            jcr:primaryType="nt:unstructured"
+                                            toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
                                     </cui>
                                 </uiSettings>
                             </description>
