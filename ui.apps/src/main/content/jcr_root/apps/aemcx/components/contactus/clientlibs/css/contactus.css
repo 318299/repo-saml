@@ -12,6 +12,31 @@
 .top{
     color:orange;
 }
+@media only screen and (max-width:801px){
+    #target{
+        padding-top: 3.176vw;
+        padding-right: 2.994vw;
+        padding-bottom: 3.176vw;
+        padding-left: 2.994vw;
+        background-color: #151617;
+        position: fixed;
+        top: 102.537vw;
+        left: 54.15vw;
+    }
+}
+@media only screen and (min-width:802px){
+    #target{
+        padding-top: 3.176vw;
+        padding-right: 2.994vw;
+        padding-bottom: 3.176vw;
+        padding-left: 2.994vw;
+        background-color: #151617;
+        position:fixed;
+        left: 64.150vw;
+        top: 15vw;
+    }
+
+}
 #target{
     padding-top: 3.176vw;
     padding-right: 2.994vw;
@@ -19,8 +44,8 @@
     padding-left: 2.994vw;
     background-color: #151617;
     position:fixed;
-    left: 67.150vw;
-    top: 4.537vw;
+    left: 64.150vw;
+    top: 15vw;
 }
 label{
     color: white;
@@ -77,31 +102,6 @@ input[type=submit]:hover {
     background-color:orange;
     width: 3.176vw;
     height: 3.176vw;
-}
-@media only screen and (max-width:801px){
-    #target{
-        padding-top: 3.176vw;
-        padding-right: 2.994vw;
-        padding-bottom: 3.176vw;
-        padding-left: 2.994vw;
-        background-color: #151617;
-        position: fixed;
-        top: 102.537vw;
-        left: 54.15vw;
-    }
-}
-@media only screen and (min-width:802px){
-    #target{
-        padding-top: 3.176vw;
-        padding-right: 2.994vw;
-        padding-bottom: 3.176vw;
-        padding-left: 2.994vw;
-        background-color: #151617;
-        position:fixed;
-        left: 67.150vw;
-        top: 4.537vw;
-    }
-
 }
 /**@media only screen and (max-width:801px){
     .icons{
