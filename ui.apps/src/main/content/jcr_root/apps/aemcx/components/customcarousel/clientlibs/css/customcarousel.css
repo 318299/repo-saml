@@ -46,7 +46,7 @@ section.main {
         transition: 0.2s;
         background-color: #222222;
   }
-.carousellist, img {
+.carousellist, .carouselimage {
     width: 28vw;
     height: 27.5vw;
 }
