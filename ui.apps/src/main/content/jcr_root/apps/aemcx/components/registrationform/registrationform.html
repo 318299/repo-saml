@@ -1,0 +1,37 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+     <sly data-sly-call="${clientlib.all @ categories=['aemcx.components.registrationform'] }" />
+</sly>
+<form> 
+  <div class="registerform-container">  
+	  <center><h2 class="registerform-heading"> Enrol Onto Club Signature For A Bouquet Of <br>Benefits And Privileges by Signature.</h2></center>  
+	  <hr>  
+		<label> Firstname </label>   
+		<input type="text" name="firstname" placeholder= "Enter Firstname" size="15" required /> 
+		<br><br>
+		<label> Lastname </label>    
+		<input type="text" name="lastname" placeholder="Enter Lastname" size="15"required />   
+		<br><br>
+		<label>Phone</label>  
+		<input type="text" name="phone" placeholder="Enter phone no." size="10" &nbsp;/ required>
+		<br><br>
+		<label for="email"><b>Email</b></label>  
+		<input type="text" placeholder="Enter Email" name="email" required>  
+		<br><br>
+		<label for="psw"><b>Password</b></label>  
+		<input type="password" placeholder="Enter Password" name="psw" required>  
+		<br><br>
+		<label for="date"><b>Date</b></label>  
+		<input type="date" placeholder="Choose the Date" name="dt" id="date">
+		<br><br>
+		<div>  
+			<label>Events</label>   
+			<select>  
+				<option value="Select Option">Select Option</option> 
+				<option value="Mini Concert">Mini Concert</option>  
+				<option value="Open Mic Night">Open Mic Night</option>  
+			</select>  
+		</div>  
+		<br><br>
+		 <button class="registerform-button" onclick="alert('Thankyou for registering!')"><b>Register</b></button> 
+	</div>
+ </form>

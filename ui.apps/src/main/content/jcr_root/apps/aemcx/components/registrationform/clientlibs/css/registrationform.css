@@ -1,0 +1,42 @@
+.registerform-container {
+    padding: 3.90625vw;
+    background-color: #222222;
+}
+.registerform-heading {
+    color: Cornsilk;
+}
+label{
+    color: white;
+}
+input[type=text],input[type=password],input[type=date], textarea { 
+    width: 100%;
+    padding: 1.171875vw;
+    margin: 0.390625vw 0 1.71875vw 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 0.3125vw;
+}
+input[type=text]:focus,input[type=password]:focus,input[type=date]:focus {
+  background-color: #faebd7;
+    border: none;
+    border-radius: 0.3125vw;
+}
+input[type=email]:focus{
+    background-color: #faebd7;
+    border: none;
+    border-radius: 0.3125vw;
+}
+.registerform-button {
+    background-color: orange;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;  
+    cursor: pointer;  
+    width: 100%;  
+    opacity: 0.9;
+}
+.registerform-button:hover {
+    opacity: 1;
+}     
