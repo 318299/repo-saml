@@ -1,0 +1,114 @@
+.two{
+    float: left;
+    color:#faebd7;
+}
+.note{
+    width: 33%;
+    line-height: 2rem;
+}
+.icons{
+    font-family: inherit;
+}
+.top{
+    color:orange;
+}
+#target{
+    padding-top: 3.176vw;
+    padding-right: 2.994vw;
+    padding-bottom: 3.176vw;
+    padding-left: 2.994vw;
+    background-color: #151617;
+    position:fixed;
+    left: 67.150vw;
+    top: 4.537vw;
+}
+label{
+    color: white;
+}
+input{
+    background-color: white; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #76737d;
+    text-align:center;
+    padding: 0.625vw;
+    width: 100%;
+    border: none;
+    border-radius: 0.3125vw;
+}
+input[type=text]:focus {
+  background-color: #faebd7;
+    border: none;
+    border-radius: 0.3125vw;
+}
+input[type=email]:focus{
+    background-color: #faebd7;
+    border: none;
+    border-radius: 0.3125vw;
+
+}
+input[type=submit] {
+  background-color: orange;
+  color: white;
+  padding: 0.9375vw 1.5625vw;
+  border: none;
+  border-radius: 0.3125vw;
+}
+input[type=submit]:hover {
+  background-color: #04AA6D;
+}
+.contact-svg {
+  padding-top: 0px;
+  padding-right: 2.27vw;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  width:  5.89vw;
+  height: 3.63vw;
+}
+.social-media-links {
+  margin-top: 0px;
+  margin-right: 3.176vw;
+  margin-bottom: 7.26vw;
+  margin-left: 0px;
+  width: 22.686vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-svg {
+    background-color:orange;
+    width: 3.176vw;
+    height: 3.176vw;
+}
+@media only screen and (max-width:801px){
+    #target{
+        padding-top: 3.176vw;
+        padding-right: 2.994vw;
+        padding-bottom: 3.176vw;
+        padding-left: 2.994vw;
+        background-color: #151617;
+        position: fixed;
+        top: 102.537vw;
+        left: 54.15vw;
+    }
+}
+@media only screen and (min-width:802px){
+    #target{
+        padding-top: 3.176vw;
+        padding-right: 2.994vw;
+        padding-bottom: 3.176vw;
+        padding-left: 2.994vw;
+        background-color: #151617;
+        position:fixed;
+        left: 67.150vw;
+        top: 4.537vw;
+    }
+
+}
+/**@media only screen and (max-width:801px){
+    .icons{
+        float: right;
+    }
+    .contact-svg{
+        width: 3vw;
+        height: 3vw;
+    }
+}**/

@@ -1,0 +1,54 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+     <sly data-sly-call="${clientlib.all @ categories=['aemcx.components.contactus'] }" />
+</sly>
+<div class ="two">
+    <p class="note">${properties.paragraph}</p>
+    <div class="icons">
+            <div class="phone text-box">
+                    <img class="contact-svg" src=https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET21.jpg>
+                    <p class="contact-text">
+                        ${properties.contactnumber}
+                    </p>
+            </div>
+            <div class="mail text-box">
+                    <img class="contact-svg" src=https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET23.jpg>
+                    <p class="contact-text">
+                        ${properties.address}
+                    </p>
+                  </div>
+    </div>
+    <br><br><br>
+    <div class="social-media-links">
+                  <a href=${properties.linkedinlink}>
+                    <img class="social-svg" id="is9ym" src=https://cdn4.iconfinder.com/data/icons/social-media-2259/124/linkedin-512.png>
+                  </a>
+                  <a href=${properties.twitterlink}>
+                    <img class="social-svg" id="i706n" src=https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg>
+                  </a>
+                  <a href=${properties.instagramlink}>
+                    <img class="social-svg" id="ib9ve" src=https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg>
+                  </a>
+                  <a href=${properties.facebooklink}>
+                    <img class="social-svg" id="ie9fx" src=https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg>
+                  </a>
+    </div>
+</div>
+<div class="one">
+<form id="target" onsubmit="return myFunction()" >
+        <h1 class ="top"><a href="">NTT DATA </a></h1>
+        <p> We will get back to you in 24 hours</p>
+        <label for="fname"> First Name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Enter your last name" required><br><br>
+
+        <label for="phno">Phone Number</label><br>
+        <input type="text" id="phno" name="phno" pattern="[789][0-9]{9}" placeholder="Enter your phone number:"required><br><br>
+
+        <label for="gmail">Gmail:</label><br>
+        <input type="email" id="gmail" name="gmail" placeholder="Enter your gmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
+
+        <input type="submit" onClick="myFunction()"/>
+</form>
+</div>

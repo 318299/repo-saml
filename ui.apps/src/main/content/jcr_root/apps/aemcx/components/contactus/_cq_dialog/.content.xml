@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Contact Us - Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem6_5_docs_component_en#Title">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <thankyounote
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                        fieldLabel="Enter your Thankyou Note"
+                        name="./paragraph"/>
+                    <contactnumber
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Contact Number"
+                        fieldLabel="Enter your Contact Number"
+                        name="./contactnumber"/>
+                    <address
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                        fieldLabel="Enter the Address"
+                        name="./address"/>
+                    <linkedinlink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="LinkedIn URL"
+                        fieldLabel="LinkedIn Page Link"
+                        name="./linkedinlink"
+                        rootPath="/content"
+                        wrapperClass="cmp-image--editor-link"/>
+                    <instagramlink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Instagram Page URL"
+                        fieldLabel="Instagram Link"
+                        name="./instagramlink"
+                        rootPath="/content"
+                        wrapperClass="cmp-image--editor-link"/>
+                    <twitterlink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Twitter Page URL"
+                        fieldLabel="Twitter Link"
+                        name="./twitterlink"
+                        rootPath="/content"
+                        wrapperClass="cmp-image--editor-link"/>
+                    <facebooklink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Facebook Page URL"
+                        fieldLabel="Facebook Link"
+                        name="./facebooklink"
+                        rootPath="/content"
+                        wrapperClass="cmp-image--editor-link"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
