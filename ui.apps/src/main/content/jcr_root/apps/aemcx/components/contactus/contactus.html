@@ -39,16 +39,18 @@
         <p> We will get back to you in 24 hours</p>
         <label for="fname"> First Name:</label><br>
         <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br><br>
+        <p id="fname-error"></p><br><br>
 
         <label for="lname">Last Name:</label><br>
-        <input type="text" id="fname" name="fname" placeholder="Enter your last name" required><br><br>
+        <input type="text" id="lname" name="fname" placeholder="Enter your last name" required><br><br>
+        <p id="lname-error"></p><br><br>
 
         <label for="phno">Phone Number</label><br>
-        <input type="tel" id="phno" name="phno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter your phone number: (123-123-1234)"required><br><br>
-
+        <input type="tel" id="phno" name="phno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(123-123-1234)"required><br><br>
+        <p id="phno-error"></p><br><br>
         <label for="gmail">Gmail:</label><br>
         <input type="email" id="gmail" name="gmail" placeholder="Enter your gmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
-
+        <p id="gmail-error"></p><br><br>
         <input type="submit" onClick="myFunction()"/>
 </form>
 </div>

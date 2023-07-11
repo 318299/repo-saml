@@ -12,7 +12,7 @@
 .top{
     color:orange;
 }
-@media only screen and (max-width:801px){
+@media only screen and (max-width:768px){
     #target{
         padding-top: 3.176vw;
         padding-right: 2.994vw;
@@ -24,7 +24,7 @@
         left: 54.15vw !important;
     }
 }
-@media only screen and (min-width:802px){
+@media only screen and (min-width:769px){
     #target{
         padding-top: 3.176vw;
         padding-right: 2.994vw;
@@ -34,6 +34,7 @@
         position:absolute;
         left: 64.150vw !important;
         top: 15vw !important;
+		width: 26% !important;
     }
 
 }
@@ -102,6 +103,26 @@ input[type=submit]:hover {
     background-color:orange;
     width: 3.176vw;
     height: 3.176vw;
+}
+#fname-error{
+    color: red;
+    animation: fadeIn 2s; 
+}
+#lname-error{
+    color: red;
+    animation: fadeIn 2s; 
+}
+#phno-error{
+    color: red;
+    animation: fadeIn 2s; 
+}
+#gmail-error{
+    color: red;
+    animation: fadeIn 2s; 
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 /**@media only screen and (max-width:801px){
     .icons{
