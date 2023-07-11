@@ -39,4 +39,24 @@ input[type=email]:focus{
 }
 .registerform-button:hover {
     opacity: 1;
-}     
+}
+#firstname-error{
+    color: red;
+    animation: fadeIn 2s; 
+}
+#lastname-error{
+    color: red;
+    animation: fadeIn 2s; 
+}
+#tel-error{
+    color: red;
+    animation: fadeIn 2s; 
+}
+#mail-error{
+    color: red;
+    animation: fadeIn 2s; 
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}    

@@ -1,27 +1,28 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-     <sly data-sly-call="${clientlib.all @ categories=['aemcx.components.registrationform'] }" />
+     <sly data-sly-call="${clientlib.css @ categories=['aemcx.components.registrationform'] }" />
 </sly>
 <form> 
   <div class="registerform-container">  
 	  <center><h2 class="registerform-heading"> Enrol Onto Club Signature For A Bouquet Of <br>Benefits And Privileges by Signature.</h2></center>  
 	  <hr>  
 		<label> Firstname </label>   
-		<input type="text" name="firstname" placeholder= "Enter Firstname" size="15" required> 
-		<br><br>
+		<input type="text" id="firstname" name="firstname" placeholder= "Enter Firstname" size="15" required>
+		<p id="firstname-error"></p><br>
+		<br>
 		<label> Lastname </label>    
-		<input type="text" name="lastname" placeholder="Enter Lastname" size="15" required>   
-		<br><br>
+		<input type="text"  id="lastname" name="lastname" placeholder="Enter Lastname" size="15" required>   
+		<p id="lastname-error"></p><br><br>
 		<label>Phone</label>  
-		<input type="tel" name="phone" placeholder="Enter phone no. (123-123-1234)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="10"  &nbsp;/ required>
-		<br><br>
+		<input type="tel" id="contact" name="phone" placeholder="Enter phone no. (123-123-1234)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="10"  &nbsp;/ required>
+		<p id="tel-error"></p><br><br>
 		<label for="email"><b>Email</b></label>  
-		<input type="text" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>  
-		<br><br>
-		<label for="psw"><b>Password</b></label>  
-		<input type="password" placeholder="Enter Password" name="psw" required>  
-		<br><br>
+		<input type="text" id="mail" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>  
+		<p id="mail-error"></p><br><br>
+		<!--<label for="psw"><b>Password</b></label> --> 
+		<!--<input type="password" placeholder="Enter Password" name="psw" required>  
+		<p id="fname-error"></p><br><br>-->
 		<label for="date"><b>Date</b></label>  
-		<input type="date" placeholder="Choose the Date" name="dt" id="date">
+		<input type="date" id="registerdate" placeholder="Choose the Date" name="dt" id="date" required>
 		<br><br>
 		<div>  
 			<label>Events</label>   
@@ -32,6 +33,9 @@
 			</select>  
 		</div>  
 		<br><br>
-		 <button class="registerform-button" onclick="alert('Thankyou for registering!')"><b>Register</b></button> 
+		 <button class="registerform-button" onclick="myRegisterForm()"><b>Register</b></button> 
 	</div>
  </form>
+ <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+     <sly data-sly-call="${clientlib.js @ categories=['aemcx.components.registrationform'] }" />
+</sly>

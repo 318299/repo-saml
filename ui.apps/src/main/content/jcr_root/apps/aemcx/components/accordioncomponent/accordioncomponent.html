@@ -1,14 +1,14 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-     <sly data-sly-call="${clientlib.css @ categories=['aemcx.components,aemcx.components.accordioncomponent'] }"/>
+	<sly data-sly-call="${clientlib.css @ categories=['aemcx.components,aemcx.components.accordioncomponent'] }"/>
 </sly>
-<h1>Accordion Component</h1><b></b>
+<h1 class="restaurants">Signature</h1><b></b>
 <div class="accordioncomponent">
     <ul class="accordion-list">
         <div data-sly-use.multiItems="com.aemcx.core.models.AccordionComponentModel">
             <div data-sly-list.head="${multiItems.multiFieldItems}">
-                <div class="restaurants">
+                <!--<div class="restaurants">
                     <div class="h">${head.restaurant}</div>
-                </div>
+                </div>-->
                 <br>
                 <details>
                     <img src=${head.imageLink} class="bg-img">
@@ -22,9 +22,9 @@
                     </a>
                 </details><b></b>
             </div>
-        </div>   
+        </div>
     </ul>
 </div>
- <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-     <sly data-sly-call="${clientlib.js @ categories=['aemcx.components,aemcx.components.accordioncomponent'] }"/>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+	<sly data-sly-call="${clientlib.js @ categories=['aemcx.components,aemcx.components.accordioncomponent'] }"/>
 </sly>

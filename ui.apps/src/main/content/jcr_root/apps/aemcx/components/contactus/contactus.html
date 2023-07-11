@@ -1,5 +1,5 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-     <sly data-sly-call="${clientlib.all @ categories=['aemcx.components.contactus'] }" />
+     <sly data-sly-call="${clientlib.css @ categories=['aemcx.components.contactus'] }" />
 </sly>
 <div class ="two">
     <p class="note">${properties.paragraph}</p>
@@ -34,8 +34,8 @@
     </div>
 </div>
 <div class="one">
-<form id="target" onsubmit="return myFunction()" >
-        <h1 class ="top">Signature</h1>
+<form id="target" onsubmit="return myContactUsForm" >
+        <h1 class ="top">NTT DATA <span class="contact-heading">Signature</span></h1>
         <p> We will get back to you in 24 hours</p>
         <label for="fname"> First Name:</label><br>
         <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br>
@@ -54,3 +54,6 @@
         <input type="submit" onClick="myFunction()"/>
 </form>
 </div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+     <sly data-sly-call="${clientlib.js @ categories=['aemcx.components.contactus'] }" />
+</sly>

@@ -10,6 +10,9 @@
     font-family: inherit;
 }
 .top{
+	color:orange;
+}
+.contact-heading{
 	font-family: 'cutterlinesdemo';
     color:orange;
 }
