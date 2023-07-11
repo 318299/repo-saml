@@ -6,16 +6,16 @@
 	  <center><h2 class="registerform-heading"> Enrol Onto Club Signature For A Bouquet Of <br>Benefits And Privileges by Signature.</h2></center>  
 	  <hr>  
 		<label> Firstname </label>   
-		<input type="text" name="firstname" placeholder= "Enter Firstname" size="15" required /> 
+		<input type="text" name="firstname" placeholder= "Enter Firstname" size="15" required> 
 		<br><br>
 		<label> Lastname </label>    
-		<input type="text" name="lastname" placeholder="Enter Lastname" size="15"required />   
+		<input type="text" name="lastname" placeholder="Enter Lastname" size="15" required>   
 		<br><br>
 		<label>Phone</label>  
-		<input type="text" name="phone" placeholder="Enter phone no." size="10" &nbsp;/ required>
+		<input type="tel" name="phone" placeholder="Enter phone no. (123-123-1234)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="10"  &nbsp;/ required>
 		<br><br>
 		<label for="email"><b>Email</b></label>  
-		<input type="text" placeholder="Enter Email" name="email" required>  
+		<input type="text" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>  
 		<br><br>
 		<label for="psw"><b>Password</b></label>  
 		<input type="password" placeholder="Enter Password" name="psw" required>  

@@ -19,9 +19,9 @@
         padding-bottom: 3.176vw;
         padding-left: 2.994vw;
         background-color: #151617;
-        position: fixed;
-        top: 102.537vw;
-        left: 54.15vw;
+        position: absolute;
+        top: 102.537vw !important;
+        left: 54.15vw !important;
     }
 }
 @media only screen and (min-width:802px){
@@ -31,9 +31,9 @@
         padding-bottom: 3.176vw;
         padding-left: 2.994vw;
         background-color: #151617;
-        position:fixed;
-        left: 64.150vw;
-        top: 15vw;
+        position:absolute;
+        left: 64.150vw !important;
+        top: 15vw !important;
     }
 
 }
@@ -43,7 +43,7 @@
     padding-bottom: 3.176vw;
     padding-left: 2.994vw;
     background-color: #151617;
-    position:fixed;
+    position:absolute;
     left: 64.150vw;
     top: 15vw;
 }
@@ -60,7 +60,7 @@ input{
     border: none;
     border-radius: 0.3125vw;
 }
-input[type=text]:focus {
+input[type=text]:focus, input[type=tel]:focus {
   background-color: #faebd7;
     border: none;
     border-radius: 0.3125vw;
