@@ -16,7 +16,7 @@
 		<input type="tel" id="contact" name="phone" placeholder="Enter phone no. (123-123-1234)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="10"  &nbsp;/ required>
 		<p id="tel-error"></p><br><br>
 		<label for="email"><b>Email</b></label>  
-		<input type="text" id="mail" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>  
+		<input type="email" id="mail" placeholder="Enter your mail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>  
 		<p id="mail-error"></p><br><br>
 		<!--<label for="psw"><b>Password</b></label> --> 
 		<!--<input type="password" placeholder="Enter Password" name="psw" required>  
@@ -36,6 +36,6 @@
 		 <button class="registerform-button" onclick="myRegisterForm()"><b>Register</b></button> 
 	</div>
  </form>
- <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
      <sly data-sly-call="${clientlib.js @ categories=['aemcx.components.registrationform'] }" />
 </sly>
