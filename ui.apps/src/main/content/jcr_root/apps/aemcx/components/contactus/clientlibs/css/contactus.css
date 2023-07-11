@@ -10,6 +10,7 @@
     font-family: inherit;
 }
 .top{
+	font-family: 'cutterlinesdemo';
     color:orange;
 }
 @media only screen and (max-width:768px){

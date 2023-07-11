@@ -1,0 +1,109 @@
+.accordioncomponent {
+    /*background-color: #dce7eb;*/
+    background-color: #444;
+    color: #ccc;
+    cursor: pointer;
+    padding: 1vw;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+.active, .accordioncomponent:hover {
+    background-color: #222;
+}
+.accordion-list {
+    list-style: none;
+    perspective: 900;
+    padding: 0;
+    margin: 0;
+}
+.restaurants {
+    font-family: 'cutterlinesdemo';
+    text-align: center;
+    color: orange;
+    top: 20%;
+}
+.restaurants{
+    position: sticky;
+    font-size: 2.875rem;
+    font-weight: bold;
+    color: orange;
+}
+.p1 {
+    position: absolute !important;
+    font-size: 2.5vw;
+    line-height: 34px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+    background-color: #222;
+    margin: 0;
+    top: 40%;
+    left: 55%;
+    text-align: center !important;
+}
+.p2{
+    color: rgba(48, 69, 92, 0.8);
+    font-size: 1.4vw;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    position: absolute !important;
+    top: 50%;
+    left: 43%;
+    overflow: hidden;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate(0, 0);
+    margin-top: 14px;
+    z-index: 2;
+    text-align: center;
+    width: 40%;
+    background-color: #222;
+}
+.bg-img{
+    height: 40vw;
+    width: 50vw;
+    opacity: 0.8;
+}
+.btn { 
+    background-color: black;
+    border: none;
+    color: orange;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4vw;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    float: right;
+}
+/* # The Sliding Summary # */
+details {
+    overflow: hidden; 
+}
+details summary {
+    position: relative;
+    z-index: 10;
+}
+@keyframes details-show {
+  from {
+      margin-bottom: -80%;
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+}
+details > *:not(summary) {
+    animation: details-show 500ms ease-in-out;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    color: transparent;
+    overflow: hidden;
+}
+details[open] > *:not(summary) {
+    color: inherit;
+}
