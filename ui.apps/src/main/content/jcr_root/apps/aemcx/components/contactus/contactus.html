@@ -46,7 +46,7 @@
         <label for="phno">Phone Number</label><br>
         <input type="tel" id="phno" name="phno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(123-123-1234)"required><br><br>
         <label for="gmail">Gmail:</label><br>
-        <input type="email" id="gmail" name="gmail" placeholder="Enter your mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
+        <input type="email" id="gmail" name="gmail" pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" placeholder="Enter your mail"required><br><br>
         <input type="submit" onClick="myContactUsForm()"/>
 </form>
 </div>
@@ -56,8 +56,9 @@
     let lname = document.getElementById("lname").value;
     let phno = document.getElementById("phno").value;
     let gmail = document.getElementById("gmail").value;
+	var mailPattern = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 	console.log("fname="+fname+" lname="+lname+" phno="+phno+" gmail="+gmail);
-    if (!isNaN(fname) && !isNaN(lname) && !isNaN(phno) && !isNaN(gmail)) {
+    if ((fname!="") && (lname!="") && (phno!="") && (gmail!="") && (gmail.match(mailPattern))) {
 			alert( "Your Details are submitted successfully!")
 	}
 }

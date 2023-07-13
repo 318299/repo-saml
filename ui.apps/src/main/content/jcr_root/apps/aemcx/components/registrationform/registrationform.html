@@ -5,45 +5,52 @@
   <div class="registerform-container">  
 	  <center><h2 class="registerform-heading"> Enrol Onto Club Signature For A Bouquet Of <br>Benefits And Privileges by Signature.</h2></center>  
 	  <hr>  
-		<label> Firstname </label>   
+		<label> Firstname* </label>   
 		<input type="text" id="firstname" name="firstname" placeholder= "Enter Firstname" size="15" required><br>
 		<br>
-		<label> Lastname </label>    
+		<label> Lastname* </label>    
 		<input type="text"  id="lastname" name="lastname" placeholder="Enter Lastname" size="15" required>   
 		<br><br>
-		<label>Phone</label>  
+		<label>Phone*</label>  
 		<input type="tel" id="contact" name="phone" placeholder="Enter phone no. (123-123-1234)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="10"  &nbsp;/ required>
 		<br><br>
-		<label for="email"><b>Email</b></label>  
-		<input type="email" id="mail" placeholder="Enter your mail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>  
+		<label for="email"><b>Email*</b></label>  
+		<input type="email" id="mail" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" placeholder="Enter your mail"required>  
 		<br><br>
 		<!--<label for="psw"><b>Password</b></label> --> 
 		<!--<input type="password" placeholder="Enter Password" name="psw" required>  
 		<p id="fname-error"></p><br><br>-->
-		<label for="date"><b>Date</b></label>  
-		<input type="date" id="registerdate" placeholder="Choose the Date" name="dt" id="date" required>
+		<label for="date"><b>Date*</b></label>  
+		<input type="date" id="registerdate" placeholder="Choose the Date" name="date"required>
 		<br><br>
 		<div>  
-			<label>Events</label>   
-			<select>  
+			<label for="events">Events*</label>   
+			<select id="events"required>  
 				<option value="Select Option">Select Option</option> 
 				<option value="Mini Concert">Mini Concert</option>  
 				<option value="Open Mic Night">Open Mic Night</option>  
 			</select>  
 		</div>  
 		<br><br>
-		 <button class="registerform-button" onclick="myRegisterForm()"><b>Register</b></button> 
+		 <button class="registerform-button" onclick="myRegisterForm()">Register</button> 
 	</div>
  </form>
  <script>
-	function myRegisterForm()() {
+	function myRegisterForm() {
     let fname = document.getElementById("firstname").value;
     let lname = document.getElementById("lastname").value;
     let phno = document.getElementById("contact").value;
     let gmail = document.getElementById("mail").value;
-	console.log("fname="+fname+" lname="+lname+" phno="+phno+" gmail="+gmail);
-    if (!isNaN(fname) && !isNaN(lname) && !isNaN(phno) && !isNaN(gmail)) {
+	let event = document.getElementById("events").value;
+	let registerdate = document.getElementById("registerdate").value;
+	var mailPattern = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/; 
+	console.log("fname="+fname+" lname="+lname+" phno="+phno+" gmail="+gmail+" date="+registerdate+" event="+event);
+    if ((fname!="") && (lname!="") && (phno!="") && (gmail!="") && (gmail.match(mailPattern)) && (event!="Select Option")) {
+		console.log("event= "+event)
 		alert ("Your details are submitted successfully!");
+	}
+	else{
+		alert("Enter the values of all the fields required");
 	}
 }
  </script>
