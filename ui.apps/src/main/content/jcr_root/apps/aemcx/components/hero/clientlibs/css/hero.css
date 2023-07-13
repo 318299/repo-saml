@@ -26,7 +26,6 @@
     cursor: pointer;
     display: inline-block;
     color: orange;
-    margin-top: 10vw;
 }
 @media only screen and (min-width:801px){
     .p1{
@@ -34,14 +33,14 @@
         position: absolute;
         top: -4vw;
         left: 4vw;
-        color: rgb(217, 173, 115);
+        color: orange;
         background-color: #222222;
         font-weight: bold;
         padding: 1vw 2vw;
     }
     .p2{
         position: absolute;
-        top: 15vw;
+        top: 20vw;
         left: 8vw;
         font-size: 1.8vw;
         font-weight: bold;
