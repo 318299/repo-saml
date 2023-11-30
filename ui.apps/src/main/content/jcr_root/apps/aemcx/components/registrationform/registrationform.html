@@ -1,9 +1,12 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
      <sly data-sly-call="${clientlib.css @ categories=['aemcx.components.registrationform'] }" />
 </sly>
-<form> 
+
+<div data-sly-use.multiItems="com.aemcx.core.models.StripeModel">
+
+<form id="form" data-parsley-validate action="/content/aemcx/us/en/home/jcr:content/root/container/container/registrationform.stripePayment.html" method="GET" target="_blank"> 
   <div class="registerform-container">  
-	  <center><h2 class="registerform-heading"> Enrol Onto Club Signature For A Bouquet Of <br>Benefits And Privileges by Signature.</h2></center>  
+	  <center><h2 class="registerform-heading"> Enroll Onto Club Signature For A Bouquet Of <br>Benefits And Privileges by Signature.</h2></center>  
 	  <hr>  
 		<label> Firstname* </label>   
 		<input type="text" id="firstname" name="firstname" placeholder= "Enter Firstname" size="15" required><br>
@@ -23,34 +26,24 @@
 		<label for="date"><b>Date*</b></label>  
 		<input type="date" id="registerdate" placeholder="Choose the Date" name="date"required>
 		<br><br>
+
+		<!-- Where my work begins -->
 		<div>  
 			<label for="events">Events*</label>   
-			<select id="events"required>  
-				<option value="Select Option">Select Option</option> 
-				<option value="Mini Concert">Mini Concert</option>  
-				<option value="Open Mic Night">Open Mic Night</option>  
+			<select name="events" id="events" required> 
+					<option value="Select Option" disabled selected>Select Option</option>
+					<div data-sly-list.stripeItemDetails="${multiItems.multiFieldItems}">  
+					<option value="${stripeItemDetails.dropdownItem}" data-price="${stripeItemDetails.itemPrice}" data-desc="${stripeItemDetails.itemDesc}">
+						${stripeItemDetails.dropdownItem}
+					</option>  
+				</div>  
 			</select>  
 		</div>  
 		<br><br>
-		 <button class="registerform-button" onclick="myRegisterForm()">Register</button> 
+		 <button id="checkout-button" class="registerform-button" onclick="stripeCheck();myRegisterForm()">Register</button> 
 	</div>
  </form>
- <script>
-	function myRegisterForm() {
-    let fname = document.getElementById("firstname").value;
-    let lname = document.getElementById("lastname").value;
-    let phno = document.getElementById("contact").value;
-    let gmail = document.getElementById("mail").value;
-	let event = document.getElementById("events").value;
-	let registerdate = document.getElementById("registerdate").value;
-	var mailPattern = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/; 
-	console.log("fname="+fname+" lname="+lname+" phno="+phno+" gmail="+gmail+" date="+registerdate+" event="+event);
-    if ((fname!="") && (lname!="") && (phno!="") && (gmail!="") && (gmail.match(mailPattern)) && (event!="Select Option")) {
-		console.log("event= "+event)
-		alert ("Your details are submitted successfully!");
-	}
-	else{
-		alert("Please fill in all the fields correctly");
-	}
-}
- </script>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+	<sly data-sly-call="${clientlib.js @ categories= ['aemcx.components.registrationform'] }"/>
+</sly>

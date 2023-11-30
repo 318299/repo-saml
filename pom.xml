@@ -47,6 +47,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <aemanalyser.version>0.0.12</aemanalyser.version>
         <aem.sdk.api>2020.11.4553.20201124T121539Z-201028</aem.sdk.api>
+		<stripe-java-version>22.27.0</stripe-java-version>
     </properties>
 
     <repositories>
@@ -177,6 +178,8 @@ Bundle-Category: ${componentGroupName}
 # reproducible builds (https://github.com/bndtools/bnd/issues/3521)
 -noextraheaders: true
 -snapshot: SNAPSHOT
+
+-includeresource: stripe-java-${stripe-java-version}.jar;lib:=true 
 
 Bundle-DocURL:
 -plugin org.apache.sling.caconfig.bndplugin.ConfigurationClassScannerPlugin
@@ -725,7 +728,17 @@ Bundle-DocURL:
                 <type>zip</type>
                 <version>${core.wcm.components.version}</version>
             </dependency>
-
+			<!-- Stripe Dependency -->
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.10.1</version>
+			</dependency>
+			<dependency>
+                <groupId>com.stripe</groupId>
+                <artifactId>stripe-java</artifactId>
+                <version>22.27.0</version>
+            </dependency>
 
             <!-- Testing -->
             <dependency>

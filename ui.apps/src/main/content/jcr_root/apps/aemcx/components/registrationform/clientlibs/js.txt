@@ -1,2 +1,4 @@
 #base=js
+jquery.js
+parsley.js
 registrationform.js

@@ -68,39 +68,82 @@
                         sling:resourceType="granite/ui/components/coral/foundation/tabs"
                         maximized="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
-                            <properties
+                            <usersubmenu
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="Properties"
+                                jcr:title="User Submenu"
                                 sling:resourceType="granite/ui/components/coral/foundation/container"
                                 margin="{Boolean}true">
                                 <items jcr:primaryType="nt:unstructured">
                                     <columns
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
-                                        margin="{Boolean}true">
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
                                         <items jcr:primaryType="nt:unstructured">
                                             <column
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/container">
                                                 <items jcr:primaryType="nt:unstructured">
-                                                    <text
+                                                    <successURL
                                                         jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                        fieldDescription="The text to display on the button."
-                                                        fieldLabel="Text"
-                                                        name="./buttontext"/>
-                                                    <link
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        fieldDescription="Enter resource type of success page"
+                                                        fieldLabel="Success URL"
+                                                        name="./successURL"/>
+                                                    <cancelURL
                                                         jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
-                                                        fieldDescription="Link to a content page, external URL or page anchor."
-                                                        fieldLabel="Link"
-                                                        name="./link"/>
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        fieldDescription="Enter resource type of cancel page"
+                                                        fieldLabel="Cancel URL"
+                                                        name="./cancelURL"/>
+                                                    <listitems
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                        class="full-width"
+                                                        composite="{Boolean}true"
+                                                        fieldDescription="Click 'Add field' to add a new User Submenu title and links"
+                                                        fieldLabel="\0">
+                                                        <field
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                                                            acs-commons-nested="\0"
+                                                            name="./myUserSubmenu">
+                                                            <layout
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                                method="absolute"/>
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <column
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <dropdownItem
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                            fieldDescription="Enter item to add to drop-down"
+                                                                            fieldLabel="Dropdown Item"
+                                                                            name="./dropdownItem"/>
+                                                                        <itemPrice
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                            fieldDescription="Enter item price"
+                                                                            fieldLabel="Item Price"
+                                                                            name="./itemPrice"/>
+                                                                        <itemDescription
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                            fieldDescription="Enter item description"
+                                                                            fieldLabel="Item Description"
+                                                                            name="./itemDesc"/>
+                                                                    </items>
+                                                                </column>
+                                                            </items>
+                                                        </field>
+                                                    </listitems>
                                                 </items>
                                             </column>
                                         </items>
                                     </columns>
                                 </items>
-                            </properties>
+                            </usersubmenu>
                         </items>
                     </tabs>
                 </items>
