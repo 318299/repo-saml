@@ -176,14 +176,14 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>stripe-java</artifactId>
         </dependency>
         <!-- Solr Integration Maven Dependencies -->
-        <!-- <dependency>
+        <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.solr-solrj</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.zookeeper</artifactId>
-        </dependency> -->
+        </dependency>
         <!-- Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>

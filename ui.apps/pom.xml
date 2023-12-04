@@ -88,6 +88,22 @@
                             <artifactId>org.apache.sling.dynamic-include</artifactId>
                             <target>/apps/aemcx-vendor-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.google.code.gson</groupId>
+                            <artifactId>gson</artifactId>
+                            <target>/apps/aemcx-vendor-packages/application/install</target>
+                        </embedded>
+                             <!-- Solr Integration Maven Dependencies -->
+                    <embedded>
+                        <groupId>org.apache.servicemix.bundles</groupId>
+                        <artifactId>org.apache.servicemix.bundles.solr-solrj</artifactId>
+                        <target>/apps/aemcx-vendor-packages/application/install</target>
+                    </embedded>
+                    <embedded>
+                        <groupId>org.apache.servicemix.bundles</groupId>
+                        <artifactId>org.apache.servicemix.bundles.zookeeper</artifactId>
+                        <target>/apps/aemcx-vendor-packages/application/install</target>
+                    </embedded>
                     </embeddeds>
                     <subPackages>
                     </subPackages>

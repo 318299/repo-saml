@@ -1,0 +1,21 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+	<sly data-sly-call="${clientlib.css @ categories= ['aemcx.components.solr-form'] }"/>
+</sly>
+
+
+<div class="form-container">
+	<form id="form">
+		<h4>This is a basic search component which connects solr to fetch search results</h4>
+		<input type="text" id="query-string" name="query-string" required/>
+		<input type="button" id="search-button" value="Search"/>
+	</form>
+</div>
+
+<!--Where search results are rendered:-->
+<div id="search-result"></div>
+<br>
+
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+	<sly data-sly-call="${clientlib.js @ categories= ['aemcx.components.solr-form'] }"/>
+</sly>

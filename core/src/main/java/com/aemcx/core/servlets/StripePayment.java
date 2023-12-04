@@ -7,7 +7,7 @@ import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.servlets.HttpConstants;
-import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
+import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -29,7 +29,7 @@ import com.stripe.exception.StripeException;
 @Component(service = { Servlet.class })
 @SlingServletResourceTypes(
         resourceTypes = "aemcx/components/registrationform", //Resource Type of your Component
-        methods = HttpConstants.METHOD_GET,
+        methods = HttpConstants.METHOD_POST,
         extensions = "html",
         selectors = "stripePayment" //This can be any selector you'd like
 )
@@ -37,7 +37,7 @@ import com.stripe.exception.StripeException;
 
 @ServiceDescription("Stripe Check-out Session")
 
-public class StripePayment extends SlingSafeMethodsServlet {
+public class StripePayment extends SlingAllMethodsServlet {
 	
     private static final long serialVersionUID = 1L;
 
@@ -52,7 +52,7 @@ public class StripePayment extends SlingSafeMethodsServlet {
     StripeApiKey stripeApiKey;
 
     @Override
-    protected void doGet( final SlingHttpServletRequest req,
+    protected void doPost( final SlingHttpServletRequest req,
                           final SlingHttpServletResponse res) throws IOException {
 
     	Stripe.apiKey = stripeApiKey.getApiKey();
