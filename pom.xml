@@ -739,6 +739,17 @@ Bundle-DocURL:
                 <artifactId>stripe-java</artifactId>
                 <version>22.27.0</version>
             </dependency>
+            <!-- Solr Integration Maven Dependencies -->
+            <!-- <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.solr-solrj</artifactId>
+                <version>8.11.1_1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.zookeeper</artifactId>
+                <version>3.8.0_1</version>
+            </dependency> -->
 
             <!-- Testing -->
             <dependency>
