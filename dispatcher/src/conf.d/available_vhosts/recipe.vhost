@@ -55,8 +55,8 @@ Include conf.d/variables/custom.vars
 		RewriteEngine	on
 		Include conf.d/rewrites/rewrite.rules
 		# Rewrite index page internally, pass through (PT)
-		#RewriteRule "^(/?)$" "/content/aemcx/us/en/home.html" [PT,L]
-		RewriteRule ^/en(.*) /content/aemcx/us/en/home.html [PT,L]		
+		#RewriteRule "^(/?)$" "/content/aemcx/recipe/us/en/home.html" [PT,L]
+		RewriteRule ^/en(.*) /content/aemcx/recipe/us/en/home.html [PT,L]		
 	</IfModule>
     ErrorDocument 404 ${404_PAGE}
     ErrorDocument 500 ${500_PAGE}
