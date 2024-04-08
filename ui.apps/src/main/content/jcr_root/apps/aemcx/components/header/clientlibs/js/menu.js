@@ -15,3 +15,21 @@
         });
     });
 })(jQuery);
+function languageFrench(){
+    var langF= window.location.href;
+    langF=langF.replace("/en", "/fr");
+    location.href=langF;
+   var element = document.getElementById("#myElement"); 
+  element.textContent = location.href;
+  }
+  
+  
+  
+  function languageEnglish(){
+    var langE= window.location.href;
+    langE=langE.replace("/fr", "/en");
+      location.href=langE;
+      var element = document.getElementById("#myElement1"); 
+  element.textContent = location.href;
+  
+  }

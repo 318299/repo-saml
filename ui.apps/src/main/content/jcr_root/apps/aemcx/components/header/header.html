@@ -6,11 +6,30 @@
                  alt="AEMCX logo"/>
         </div>
 
-        <i class="cx-fs-5 icon-search" data-toggle="modal" data-target="#aemcx-search"></i>
+   <div>
+
+     <span>
+      <sly data-sly-test="${inheritedPageProperties.subtitle !='French'}">
+     <a><font size="+1" color="white" >US: </font></a>
+      <a><font size="+1"  color="#007bff" > EN </font></a>
+      <a class= "switch" onclick="languageFrench()" href=javascript:window.location=languageFrench();><font size="+1"  color="white" > | FR </font></a>
+      </sly>
+
+     <sly data-sly-test="${inheritedPageProperties.subtitle !='English'}">
+     <a><font size="+1" color="white" >US: </font></a>
+     <a><font size="+1"  color="#007bff" > FR </font></a>
+      <a class= "switch" onclick="languageEnglish()" href=javascript:window.location=languageEnglish();><font size="+1"  color="white" > | EN  </font></a>
+      </sly>
+      </span>
+
+      <i class="cx-fs-5 icon-search" data-toggle="modal" data-target="#aemcx-search"></i>
+
+     </div> 
+
+
 
         <div class="cmp-header__menu">
             <i class="cx-fs-5 icon-menu cmp-header__menu-trigger"></i>
-
             <div class="cmp-header__menu-list">
                 <div class="cmp-header__user"
                      data-sly-resource="${'user' @ resourceType='aemcx/components/user-status'}">
