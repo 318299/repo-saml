@@ -1,9 +1,9 @@
 {
     "smtp.host": "smtp.gmail.com",
     "smtp.port": "465",
-    "from.address": "noreply.aemcx@gmail.com",
-    "smtp.user": "noreply.aemcx@gmail.com",
-    "smtp.password": "nttaemcx@2020",
+    "from.address": "nttcxaem@gmail.com",
+    "smtp.user": "nttcxaem@gmail.com",
+    "smtp.password": "ktpm liix wxak zjbc",
     "smtp.ssl": "true",
     "smtp.starttls": "true",
     "debug.email": "true"

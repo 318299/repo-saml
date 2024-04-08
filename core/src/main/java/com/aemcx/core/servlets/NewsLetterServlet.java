@@ -23,8 +23,7 @@ import java.io.IOException;
         property = {
             Constants.SERVICE_DESCRIPTION + "=NewsLetter Servlet",
             "sling.servlet.methods=" + HttpConstants.METHOD_POST,
-            "sling.servlet.resourceTypes=" + "/apps/aemcx/components/newsletter",
-            "sling.servlet.selectors=" + "subscribe"
+            "sling.servlet.paths=" + "/bin/subscribe"
         }
 )
 public class NewsLetterServlet extends SlingAllMethodsServlet {
@@ -38,9 +37,11 @@ public class NewsLetterServlet extends SlingAllMethodsServlet {
     @Override
     protected void doPost(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws ServletException, IOException {
         String email = req.getParameter("email");
+        String firstName = req.getParameter("firstname");
+        String lastName = req.getParameter("lastname");
 
         LOGGER.debug("Adding [{}] to subscription list", email);
-        boolean status = newsletterService.subscribe(email);
+        boolean status = newsletterService.subscribe(email,firstName,lastName);
 
         String refererHeader = req.getHeader("Referer");
         StringBuilder str = new StringBuilder(refererHeader);

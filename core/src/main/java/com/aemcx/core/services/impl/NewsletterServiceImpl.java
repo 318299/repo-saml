@@ -46,7 +46,7 @@ public class NewsletterServiceImpl implements NewsletterService {
      * @param email
      * @return
      */
-    public boolean subscribe(String email) {
+    public boolean subscribe(String email, String firstName, String lastName) {
         Map<String, String> map = new HashMap<String, String>();
         map.put("path", BASE_PATH);
         //Issue 13 - Use constant NT_UNSTRUCTURED from interface com.day.cq.commons.jcr.JcrConstants instead of hardcoded value.
@@ -76,6 +76,8 @@ public class NewsletterServiceImpl implements NewsletterService {
                 //Node newNode = node.addNode(email, "nt:unstructured");
 				Node newNode = node.addNode(email, JcrConstants.NT_UNSTRUCTURED);
                 newNode.setProperty("email", email);
+                newNode.setProperty("firstName", firstName);
+                newNode.setProperty("lastName", lastName);
                 serviceResourceResolver.commit();
 
                 boolean success = emailService.sendMail(email);
