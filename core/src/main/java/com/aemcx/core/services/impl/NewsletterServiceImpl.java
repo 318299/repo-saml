@@ -1,18 +1,14 @@
 package com.aemcx.core.services.impl;
 
-import com.aemcx.core.services.CatalogComponentService;
 import com.aemcx.core.services.EmailService;
 import com.aemcx.core.services.NewsletterService;
 import com.aemcx.core.servlets.NewsLetterServlet;
+import com.day.cq.commons.jcr.JcrConstants;
 import com.day.cq.search.PredicateGroup;
 import com.day.cq.search.Query;
 import com.day.cq.search.QueryBuilder;
 import com.day.cq.search.result.SearchResult;
-import org.apache.sling.api.resource.LoginException;
-import org.apache.sling.api.resource.PersistenceException;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.api.resource.ResourceResolverFactory;
+import org.apache.sling.api.resource.*;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -24,8 +20,6 @@ import javax.jcr.Session;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
-//Issue 13, 14 - Use constant NT_UNSTRUCTURED from interface com.day.cq.commons.jcr.JcrConstants instead of hardcoded value.
-import com.day.cq.commons.jcr.JcrConstants;
 
 
 @Component(service = NewsletterService.class, immediate = true)
@@ -69,8 +63,7 @@ public class NewsletterServiceImpl implements NewsletterService {
             long match = searchResult.getTotalMatches();
 
             if (match == 0) {
-                Resource resource = serviceResourceResolver.getResource(BASE_PATH);
-                Node node = resource.adaptTo(Node.class);
+                Node node = this.getBaseResource(serviceResourceResolver);
                 //Issue 14 - Use constant NT_UNSTRUCTURED from interface com.day.cq.commons.jcr.JcrConstants instead of hardcoded value.
 				// Commented out below line and added new line
                 //Node newNode = node.addNode(email, "nt:unstructured");
@@ -98,5 +91,34 @@ public class NewsletterServiceImpl implements NewsletterService {
             }
         }
         return false;
+    }
+
+    private Node getBaseResource(ResourceResolver serviceResourceResolver) {
+        Node usergeneratedNode;
+        Node subscriptionsNode = null;
+        Resource resource = serviceResourceResolver.getResource(NewsletterService.BASE_PATH);
+        try {
+            if (null == resource) {
+                Resource usergeneratedResource = serviceResourceResolver.getResource("/content/aemcx/usergenerated");
+                if (null == usergeneratedResource) {
+                    Resource contentResource = serviceResourceResolver.getResource("/content/aemcx");
+                    Node contentNode = contentResource.adaptTo(Node.class);
+                    usergeneratedNode = contentNode.addNode("usergenerated", JcrConstants.NT_UNSTRUCTURED);
+                    subscriptionsNode = usergeneratedNode.addNode("subscriptions", JcrConstants.NT_UNSTRUCTURED);
+                    serviceResourceResolver.commit();
+                    return subscriptionsNode;
+                }
+                usergeneratedNode = usergeneratedResource.adaptTo(Node.class);
+                subscriptionsNode = usergeneratedNode.addNode("subscriptions", JcrConstants.NT_UNSTRUCTURED);
+                serviceResourceResolver.commit();
+                return subscriptionsNode;
+
+            }
+            subscriptionsNode = resource.adaptTo(Node.class);
+
+        } catch (Exception e) {
+            NewsletterServiceImpl.LOGGER.error("Error while creating user generated code ()", e.getMessage());
+        }
+        return subscriptionsNode;
     }
 }
