@@ -18,7 +18,6 @@
     <!-- ====================================================================== -->
     <artifactId>aemcx.all</artifactId>
     <packaging>content-package</packaging>
-    <version>1.0.0-SNAPSHOT</version>
     <name>NTT AEM CX - All</name>
     <description>All content package for NTT AEM CX</description>
 

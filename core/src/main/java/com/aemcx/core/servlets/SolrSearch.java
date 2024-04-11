@@ -1,62 +1,57 @@
 package com.aemcx.core.servlets;
 
-// import org.apache.commons.lang.StringUtils;
+import java.io.IOException;
+
+import javax.servlet.Servlet;
+
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import javax.servlet.Servlet;
-import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import com.aemcx.core.services.PageService;
 import com.aemcx.core.services.SolrClientService;
 
-@Component(
-    service=Servlet.class,
-    property={
-        Constants.SERVICE_DESCRIPTION + "=Solr",
-        "sling.servlet.methods={ GET, POST}",
-        "sling.servlet.paths=" + "/bin/solr"
-    }
-)
+@Component(service = Servlet.class, property = { Constants.SERVICE_DESCRIPTION + "=Solr",
+		"sling.servlet.methods={ GET, POST}", "sling.servlet.paths=" + "/bin/solr" })
 public class SolrSearch extends SlingAllMethodsServlet {
-    //LOGGER CLASS
-    private static final Logger LOGGER = LoggerFactory.getLogger(SolrSearch.class);
+	private static final long serialVersionUID = -2781149517615924050L;
 
-    @Reference
-    PageService pageService;
+	// LOGGER CLASS
+	private static final Logger LOGGER = LoggerFactory.getLogger(SolrSearch.class);
 
-    @Reference
-    SolrClientService solrClientService;
+	@Reference
+	private transient PageService pageService;
 
-    @Override
-    protected void doGet(final SlingHttpServletRequest req,
-     final SlingHttpServletResponse resp) throws IOException {
-        LOGGER.info("------- SEARCH SOLR START -------");
-        
-        //search text
-        String searchText = req.getParameter("query-string");
-        LOGGER.info("The search text is: {}",searchText);
+	@Reference
+	private transient SolrClientService solrClientService;
 
-        if(searchText == null) {
-            resp.getWriter().write("Oops an error happened! query string was empty");
-        }
-        else{
-            //query string to be passed to service to search solr docs
-            String query =  "content:" + searchText;
+	@Override
+	protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws IOException {
+		LOGGER.debug("------- SEARCH SOLR START -------");
 
-            pageService.fecthDocs(query);
-    
-            LOGGER.info("------- SEARCH SOLR END -------");
-    
-            resp.getWriter().write(pageService.fecthDocs(query).toString());
+		// search text
+		String searchText = req.getParameter("query-string");
+		LOGGER.debug("The search text is: {}", searchText);
 
-        }
-        resp.setContentType("application/json");
+		if (searchText == null) {
+			resp.getWriter().write("Oops an error happened! query string was empty");
+		} else {
+			// query string to be passed to service to search solr docs
+			String query = "content:" + searchText;
 
+			pageService.fecthDocs(query);
 
-}
+			LOGGER.debug("------- SEARCH SOLR END -------");
+
+			resp.getWriter().write(pageService.fecthDocs(query).toString());
+
+		}
+		resp.setContentType("application/json");
+
+	}
 }

@@ -51,7 +51,7 @@ public class NewsletterServiceImpl implements NewsletterService {
         map.put("property.value", email);
         map.put("p.limit", "-1");
 
-        Map<String, Object> userServiceParam = new HashMap();
+        Map<String, Object> userServiceParam = new HashMap<>();
         userServiceParam.put(ResourceResolverFactory.SUBSERVICE, SERVICE_USER);
         ResourceResolver serviceResourceResolver = null;
 
@@ -67,6 +67,9 @@ public class NewsletterServiceImpl implements NewsletterService {
                 //Issue 14 - Use constant NT_UNSTRUCTURED from interface com.day.cq.commons.jcr.JcrConstants instead of hardcoded value.
 				// Commented out below line and added new line
                 //Node newNode = node.addNode(email, "nt:unstructured");
+				if (node == null) {
+					throw new RepositoryException("node is null");
+				}
 				Node newNode = node.addNode(email, JcrConstants.NT_UNSTRUCTURED);
                 newNode.setProperty("email", email);
                 newNode.setProperty("firstName", firstName);
@@ -116,9 +119,9 @@ public class NewsletterServiceImpl implements NewsletterService {
             }
             subscriptionsNode = resource.adaptTo(Node.class);
 
-        } catch (Exception e) {
-            NewsletterServiceImpl.LOGGER.error("Error while creating user generated code ()", e.getMessage());
-        }
+        } catch (RepositoryException | PersistenceException e) {
+			NewsletterServiceImpl.LOGGER.error("Error while creating user generated code ()", e.getMessage());
+		}
         return subscriptionsNode;
     }
 }
